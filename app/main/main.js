@@ -1,5 +1,6 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, Menu } = require('electron');
 const path = require('path');
+const { mainMenu } = require('./menu');
 
 let mainWindow = null;
 const winDefaultOptions = {
@@ -11,11 +12,11 @@ const winDefaultOptions = {
 };
 const indexPath = path.resolve(__dirname, '../', 'renderer');
 const indexPage = path.normalize(`file://${indexPath}/index.html`);
-console.log(indexPage);
 
 function initialize() {
     app.on('ready', () => {
         createMainWindow();
+        Menu.setApplicationMenu(mainMenu);
     });
 
     app.on('window-all-closed', function () {

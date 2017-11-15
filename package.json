@@ -1,17 +1,46 @@
 {
-  "name": "electron-auotoUpate-demo",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "electron-auotUpdate-demo",
+  "version": "1.0.1",
+  "description": "electron auot update demo",
+  "author": {
+    "name": "zs"
+  },
+  "main": "./app/main/main.js",
   "scripts": {
     "start": "electron ./app/main/main.js",
+    "packWin": "electron-builder --win --x64",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
   "license": "ISC",
   "dependencies": {
+    "electron-log": "^2.2.11",
+    "electron-updater": "^2.16.1",
+    "winston": "^2.4.0"
+  },
+  "devDependencies": {
     "electron": "^1.7.9",
-    "electron-updater": "^2.16.1"
+    "electron-builder": "^19.45.4"
+  },
+  "build": {
+    "productName": "mqms_scenario_editor",
+    "artifactName": "${productName}_setup.${ext}",
+    "appId": "com.mqms.app",
+    "win": {
+      "target": [
+        {
+          "target": "nsis"
+        }
+      ]
+    },
+    "files": [
+      "app",
+      "package.json"
+    ],
+    "publish": {
+      "provider": "github",
+      "owner": "yanbeixiang",
+      "vPrefixedTagName": true
+    }
   }
 }
