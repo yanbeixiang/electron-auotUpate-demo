@@ -1,6 +1,6 @@
 {
-  "name": "electron-auotUpdate-demo",
-  "version": "1.0.2",
+  "name": "electron-autoUpdate-demo",
+  "version": "1.0.3",
   "description": "electron auot update demo",
   "author": {
     "name": "zs"
@@ -23,7 +23,7 @@
     "electron-builder": "^19.45.4"
   },
   "build": {
-    "productName": "mqms_scenario_editor",
+    "productName": "electron_autoUpdate_demo",
     "artifactName": "${productName}_setup.${ext}",
     "appId": "com.mqms.app",
     "win": {
