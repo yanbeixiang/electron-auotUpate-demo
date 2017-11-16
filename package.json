@@ -5,9 +5,9 @@
   "author": {
     "name": "zs"
   },
-  "main": "./app/main/main.js",
+  "main": "./app/main/main1.js",
   "scripts": {
-    "start": "electron ./app/main/main.js",
+    "start": "electron ./app/main/main1.js",
     "packWin": "electron-builder --win --x64",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
